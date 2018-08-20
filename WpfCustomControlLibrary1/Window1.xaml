@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfCustomControlLibrary1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfCustomControlLibrary1"
+        mc:Ignorable="d" Closing="Window_Closing"
+        Title="Window1" Height="311.759" Width="493.962">
+    <Grid>
+        <Button Content="Add" HorizontalAlignment="Left" Height="35" Margin="85,90,0,0" VerticalAlignment="Top" Width="73" Click="Button_Click"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="35" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="35" Margin="10,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
+        <ListView HorizontalAlignment="Left" Height="270" Margin="163,10,0,0" VerticalAlignment="Top" Width="317" ItemsSource="{Binding Path=list}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="Key: " />
+                        <TextBlock Text="{Binding Key}" FontWeight="Bold" />
+                        <TextBlock Text=", " />
+                        <TextBlock Text="Value: " />
+                        <TextBlock Text="{Binding Value}" FontWeight="Bold" />
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>D:\Esen Disk\Documents\My Projects\VisualStudio Workspace\Denemeler\ModuleProgramming\ModuleProgram1\MainProgram\bin\Debug\Modules\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ModuleManager\ModuleManager.csproj" />
+  </ItemGroup>
+
+</Project>
